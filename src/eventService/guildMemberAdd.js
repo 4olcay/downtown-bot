@@ -12,9 +12,8 @@ module.exports = {
 
         const embedMessage = new MessageEmbed()
             .setDescription(`<@${member.user.id}> (${member.user.tag}) sunucuya katıldı.`)
-            .setTitle('Katılım')
             .setColor(process.env.BOT_MAIN_COLOR)
-            .setThumbnail(avatar)
+            .setAuthor('Katılım', avatar)
             .setTimestamp()
 
         await welcomeChannel.send({ embeds: [embedMessage] });
